@@ -1,0 +1,60 @@
+<!--Moved to Frontend Folder after microservices topic-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <p>Hi, welcome to the Registration form</p>
+    
+<div class="centred"><!--we have given class name so that anything with that name will be applicable here
+    as we have given styling in style section with same class name-->
+
+    <form action="/submit" method="POST"> <!-- we are puting action after user hits submit button, it will route to /submit page which is reated in flask api
+        the method is post(Data is sent in the body (hidden from URL)) -->
+        <label for="name">Name</label> <!--name is the arg here which we will use in flask as well-->
+        <input type="text" name="name" id="name1" placeholder="Enter your name" align="center">
+        <!--It will take the name and not id in Flask api when we mention request.form.get('varname')-->
+        <br>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+        <br>
+
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm your password">
+        <br>
+        <input type="submit" value="Submit">
+   
+    </form>
+    
+</div>
+  
+</body>
+<style>
+    body{
+        background-color: rgb(235, 224, 246);
+    }
+    p{
+        text-align: center;
+        font-style: oblique;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: darkmagenta;
+    }
+    .centred {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+</style>
+</html>

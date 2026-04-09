@@ -1,0 +1,6 @@
+<!--Moved to Frontend and Backend Folder after microservices topic-->
+
+flask
+pymongo
+dnspython
+python-dotenv
