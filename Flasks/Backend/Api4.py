@@ -14,6 +14,7 @@ collection = db['Assignment']#created collection named 'Assignment'
 app= Flask(__name__) #creating flask api
 
 @app.route('/submittodoitem', methods=['POST'])
+
 def submittodoitem():
     #inserting into DB
     dict1=dict(request.json)
